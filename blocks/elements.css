@@ -1,0 +1,92 @@
+.elements {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 18px;
+  row-gap: 20px;
+  max-width: 880px;
+  max-height: 742px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.element__card {
+  display: flex;
+  flex-direction: column;
+  max-width: 282px;
+  height: 361px;
+  background-color: white;
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.element__image {
+  width: 282px;
+  height: 282px;
+  z-index: 2;
+}
+
+.element__delete {
+  position: absolute;
+  border: none;
+  width: 18px;
+  height: 19.3px;
+  cursor: pointer;
+  background-color: transparent;
+  top: 18px;
+  right: 18px;
+  z-index: 3;
+  background-image: url(../images/Trash.png);
+  background-size: 18px 19.3px;
+}
+
+.element__delete:hover {
+  background-image: url(../images/Trash\ hover.png);
+}
+
+.element__image-trash {
+  width: 18px;
+  height: 19.3px;
+}
+
+.element__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 246px;
+  overflow: visible;
+}
+
+.element__title {
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__btn-like {
+  border: none;
+  width: 21px;
+  height: 19px;
+  padding: 0;
+  background-color: white;
+  cursor: pointer;
+  background-image: url(../images/heart.png);
+  background-size: 21px 19px;
+}
+
+.element__btn-like:hover {
+  background-image: url(../images/heart\ hover.png);
+}
+
+.element__like {
+  width: 21px;
+  height: 19px;
+}

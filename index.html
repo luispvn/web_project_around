@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Luis Pavón" />
+    <link rel="shortcut icon" href="./globe_icon-icons.com_58031.ico" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Around the US</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="form">
+        <div class="form__overlay"></div>
+        <div class="form__card form__card-hide">
+          <div class="form__profile">
+            <div class="form__close">
+              <button type="button" class="form__close-button"></button>
+            </div>
+            <form class="form__content" id="form__save-card">
+              <h3 class="form__content-title">Editar perfil</h3>
+              <input
+                type="text"
+                placeholder="Nombre"
+                class="form__content-name"
+                id="input-name"
+              />
+              <input
+                type="text"
+                placeholder="Acerca de mi"
+                class="form__content-work"
+                id="input-work"
+              />
+              <button
+                id="form__save"
+                type="submit"
+                class="form__content-button"
+              >
+                Guardar
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="form__image form__image-hide">
+          <div class="form__profile" id="form__profile-image">
+            <div class="form__image-close">
+              <button type="submit" class="form__close-button"></button>
+            </div>
+            <form class="form__content">
+              <h3 class="form__content-title">Nuevo Lugar</h3>
+              <input
+                type="text"
+                placeholder="Título"
+                class="form__content-name"
+                id="input-title"
+              />
+              <input
+                type="text"
+                placeholder="Enlace a la imágen"
+                class="form__content-work"
+                id="input-url"
+              />
+              <button
+                id="form__create"
+                type="submit"
+                class="form__content-button"
+              >
+                Crear
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="header__content">
+          <img
+            src="./images/header_logo.png"
+            class="header__logo"
+            alt="logo del proyecto"
+          />
+        </div>
+      </header>
+      <main class="content">
+        <section class="profile">
+          <img
+            src="./images/profile_image.png"
+            class="profile__image"
+            alt="ímagen de perfil de jacques cousteau"
+          />
+          <div class="profile__info">
+            <div class="profile__info-update">
+              <h1 id="profile-name" class="profile__name">Jacques Cousteau</h1>
+              <button type="button" class="profile__update"></button>
+            </div>
+            <p class="profile__work">Explorador</p>
+          </div>
+          <button type="button" class="profile__add"></button>
+        </section>
+        <section class="elements">
+          <div class="element__card">
+            <img
+              src="./images/kirill-pershin-1088404-unsplash.png"
+              class="element__image"
+            />
+            <button type="button" class="element__delete"></button>
+            <div class="element__description">
+              <h3 class="element__title">Valle de Yosemite</h3>
+              <button type="button" class="element__btn-like"></button>
+            </div>
+          </div>
+          <div class="element__card">
+            <img
+              src="./images/kirill-pershin-1404681-unsplash.png"
+              class="element__image"
+            />
+            <button type="button" class="element__delete"></button>
+            <div class="element__description">
+              <h3 class="element__title">Lago Louise</h3>
+              <button type="button" class="element__btn-like"></button>
+            </div>
+          </div>
+          <div class="element__card">
+            <img
+              src="./images/kirill-pershin-1556355-unsplash.png"
+              class="element__image"
+            />
+            <button type="button" class="element__delete"></button>
+            <div class="element__description">
+              <h3 class="element__title">Montañas Calvas</h3>
+              <button type="button" class="element__btn-like"></button>
+            </div>
+          </div>
+          <div class="element__card">
+            <img
+              src="./images/20.GrandCanyon-42-45938276-crop-1680x1050 (1).jpg"
+              class="element__image"
+            />
+            <button type="button" class="element__delete"></button>
+            <div class="element__description">
+              <h3 class="element__title">Gran Cañon</h3>
+              <button type="button" class="element__btn-like"></button>
+            </div>
+          </div>
+          <div class="element__card">
+            <img
+              src="./images/agua-arriba_65120ecd_1254x836 (1).jpg"
+              class="element__image"
+            />
+            <button type="button" class="element__delete"></button>
+            <div class="element__description">
+              <h3 class="element__title">Parque Yellowstone</h3>
+              <button type="button" class="element__btn-like"></button>
+            </div>
+          </div>
+          <div class="element__card">
+            <img
+              src="./images/denali-national-park-1733313_1280 (1).jpg"
+              class="element__image"
+            />
+            <button type="button" class="element__delete"></button>
+            <div class="element__description">
+              <h3 class="element__title">Parque Denali</h3>
+              <button type="button" class="element__btn-like"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__info">
+          <h3 class="footer__copyright">©2024 Luis Pavón</h3>
+        </div>
+      </footer>
+    </div>
+    <script src="./blocks/script.js"></script>
+  </body>
+</html>

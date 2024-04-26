@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-self: center;
+  font-family: "Inter";
+}
+
+.header__content {
+  width: 882px;
+  max-height: 74px;
+  margin: 45px auto 40px auto;
+  border-bottom: 1px solid #545454;
+}
+
+.header__logo {
+  max-width: 173px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: 41px;
+}
