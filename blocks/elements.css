@@ -44,7 +44,7 @@
 }
 
 .element__delete:hover {
-  background-image: url(../images/Trash-hover.png);
+  opacity: 60%;
 }
 
 .element__image-trash {
