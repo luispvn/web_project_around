@@ -1,9 +1,9 @@
 .footer {
-  margin-top: 67px;
-  font-family: "Inter";
-  margin-bottom: 45px;
   display: flex;
   justify-content: center;
+  margin: 67px auto 0 auto;
+  font-family: "Inter";
+  padding-bottom: 45px;
 }
 
 .footer__info {
@@ -14,4 +14,23 @@
   font-size: 18px;
   font-weight: 400;
   color: #545454;
+  margin: 0;
+}
+
+@media (min-width: 320px) and (max-width: 744px) {
+  .footer {
+    margin-top: 47px;
+  }
+  .footer__info {
+    width: 282px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 744px) and (max-width: 882px) {
+  .footer__info {
+    width: 682px;
+  }
 }
