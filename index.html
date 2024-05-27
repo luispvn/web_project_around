@@ -46,7 +46,7 @@
             <div class="form__image-close">
               <button type="submit" class="form__close-button"></button>
             </div>
-            <form class="form__content">
+            <form class="form__content" id="new-image">
               <h3 class="form__content-title">Nuevo Lugar</h3>
               <input
                 type="text"
@@ -71,6 +71,15 @@
           </div>
         </div>
       </div>
+
+      <div class="elements__image-cover elements__image-cover-hide">
+        <button class="elements__window-close"></button>
+        <div class="elements__image-window">
+          <img class="elements__image-full" src="" alt="" />
+          <h2 class="elements__image-name"></h2>
+        </div>
+      </div>
+
       <header class="header">
         <div class="header__content">
           <img
@@ -96,80 +105,17 @@
           </div>
           <button type="button" class="profile__add"></button>
         </section>
-        <section class="element">
-          <div class="element__card">
-            <img
-              src="./images/yosemite.png"
-              class="element__image"
-              alt="imágen de un paisaje"
-            />
-            <button type="button" class="element__delete"></button>
-            <div class="element__description">
-              <h3 class="element__title">Valle de Yosemite</h3>
-              <button type="button" class="element__btn-like"></button>
+        <section class="elements"></section>
+        <template class="template__card">
+          <div class="elements__card">
+            <button class="elements__delete"></button>
+            <img class="elements__image" src="" alt="" />
+            <div class="elements__description">
+              <h2 class="elements__title"></h2>
+              <button class="elements__btn-like"></button>
             </div>
           </div>
-          <div class="element__card">
-            <img
-              src="./images/louise.png"
-              class="element__image"
-              alt="imágen de un paisaje"
-            />
-            <button type="button" class="element__delete"></button>
-            <div class="element__description">
-              <h3 class="element__title">Lago Louise</h3>
-              <button type="button" class="element__btn-like"></button>
-            </div>
-          </div>
-          <div class="element__card">
-            <img
-              src="./images/calvas.png"
-              class="element__image"
-              alt="imágen de un paisaje"
-            />
-            <button type="button" class="element__delete"></button>
-            <div class="element__description">
-              <h3 class="element__title">Montañas Calvas</h3>
-              <button type="button" class="element__btn-like"></button>
-            </div>
-          </div>
-          <div class="element__card">
-            <img
-              src="./images/Grand-canyon.jpg"
-              class="element__image"
-              alt="imágen de un paisaje"
-            />
-            <button type="button" class="element__delete"></button>
-            <div class="element__description">
-              <h3 class="element__title">Gran Cañon</h3>
-              <button type="button" class="element__btn-like"></button>
-            </div>
-          </div>
-          <div class="element__card">
-            <img
-              src="./images/yellowstone.jpg"
-              class="element__image"
-              alt="imágen de un paisaje"
-            />
-            <button type="button" class="element__delete"></button>
-            <div class="element__description">
-              <h3 class="element__title">Parque Yellowstone</h3>
-              <button type="button" class="element__btn-like"></button>
-            </div>
-          </div>
-          <div class="element__card">
-            <img
-              src="./images/denali.jpg"
-              class="element__image"
-              alt="imágen de un paisaje"
-            />
-            <button type="button" class="element__delete"></button>
-            <div class="element__description">
-              <h3 class="element__title">Parque Denali</h3>
-              <button type="button" class="element__btn-like"></button>
-            </div>
-          </div>
-        </section>
+        </template>
       </main>
       <footer class="footer">
         <div class="footer__info">

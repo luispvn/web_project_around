@@ -1,8 +1,8 @@
-.element {
+.elements {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto;
   column-gap: 18px;
   row-gap: 20px;
   max-width: 880px;
@@ -11,7 +11,7 @@
   margin-top: 50px;
 }
 
-.element__card {
+.elements__card {
   display: flex;
   flex-direction: column;
   max-width: 282px;
@@ -23,13 +23,76 @@
   position: relative;
 }
 
-.element__image {
+.elements__image {
   width: 282px;
   height: 282px;
   z-index: 2;
+  cursor: pointer;
 }
 
-.element__delete {
+.elements__image-cover {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    "close"
+    "image"
+    "name";
+  grid-template-columns: 1;
+  grid-template-rows: 3;
+  max-width: 75vw;
+  max-height: 75vh;
+  z-index: 5;
+  position: fixed;
+  left: 12.5%;
+  right: 12.5%;
+  top: 90px;
+}
+
+.elements__image-window {
+  z-index: 5;
+}
+
+.elements__window-close {
+  background-image: url(../images/Close-Icon-full.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  z-index: 5;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  grid-area: close;
+  margin-top: -40px;
+  margin-right: -50px;
+  margin-left: auto;
+}
+
+.elements__window-close:hover {
+  opacity: 60%;
+}
+
+.elements__image-full {
+  z-index: 5;
+  grid-area: image;
+  max-width: 75vw;
+}
+
+.elements__image-cover-hide {
+  display: none;
+}
+
+.elements__image-name {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  color: #ffffff;
+  margin-top: 10px;
+  grid-area: name;
+}
+
+.elements__delete {
   position: absolute;
   border: none;
   width: 18px;
@@ -43,26 +106,26 @@
   background-size: 18px 19.3px;
 }
 
-.element__delete:hover {
+.elements__delete:hover {
   opacity: 60%;
 }
 
-.element__image-trash {
+.elements__image-trash {
   width: 18px;
   height: 19.3px;
 }
 
-.element__description {
+.elements__description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: auto;
   width: 246px;
-  overflow: visible;
+  overflow-x: visible;
 }
 
-.element__title {
+.elements__title {
   font-family: "Inter";
   font-weight: 900;
   font-size: 24px;
@@ -71,7 +134,7 @@
   overflow: hidden;
 }
 
-.element__btn-like {
+.elements__btn-like {
   border: none;
   width: 21px;
   height: 19px;
@@ -82,17 +145,21 @@
   background-size: 21px 19px;
 }
 
-.element__btn-like:hover {
-  background-image: url(../images/heart-hover.png);
+.elements__btn-like:hover {
+  opacity: 60%;
 }
 
-.element__like {
+.elements__btn-like_active {
+  background-image: url(../images/heart-active.png);
+}
+
+.elements__like {
   width: 21px;
   height: 19px;
 }
 
 @media (min-width: 320px) and (max-width: 562px) {
-  .element {
+  .elements {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(1, 1fr);
@@ -106,7 +173,7 @@
 }
 
 @media (min-width: 562px) and (max-width: 882px) {
-  .element {
+  .elements {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
