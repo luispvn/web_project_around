@@ -98,7 +98,7 @@ function cardClone(name, link) {
   cardImage.addEventListener("click", openImage);
 
   function openImage() {
-    imageCover.classList.remove("elements__image-cover-hide");
+    imageCover.classList.remove("overlay-hide");
     imageFull.src = cardImage.src;
     imageSubtitle.textContent = cardTitle.textContent;
   }
@@ -125,14 +125,14 @@ imageNew.addEventListener("submit", function (evt) {
   closeFormAdd();
 });
 
-const imageCover = document.querySelector(".elements__image-cover");
-const imageWindow = imageCover.querySelector(".elements__image-window");
-const imageFull = imageWindow.querySelector(".elements__image-full");
-const imageClose = imageCover.querySelector(".elements__window-close");
-const imageSubtitle = imageWindow.querySelector(".elements__image-name");
+const imageCover = document.querySelector(".overlay-hide");
+const imageWindow = imageCover.querySelector(".overlay__image-window");
+const imageFull = imageWindow.querySelector(".overlay__image-full");
+const imageClose = imageCover.querySelector(".overlay__window-close");
+const imageSubtitle = imageWindow.querySelector(".overlay__image-name");
 
 function closeImage() {
-  imageCover.classList.add("elements__image-cover-hide");
+  imageCover.classList.add("overlay-hide");
   console.log(Event);
 }
 imageClose.addEventListener("click", closeImage);

@@ -30,68 +30,6 @@
   cursor: pointer;
 }
 
-.elements__image-cover {
-  display: grid;
-  justify-content: center;
-  grid-template-areas:
-    "close"
-    "image"
-    "name";
-  grid-template-columns: 1;
-  grid-template-rows: 3;
-  max-width: 75vw;
-  max-height: 75vh;
-  z-index: 5;
-  position: fixed;
-  left: 12.5%;
-  right: 12.5%;
-  top: 90px;
-}
-
-.elements__image-window {
-  z-index: 5;
-}
-
-.elements__window-close {
-  background-image: url(../images/Close-Icon-full.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 40px;
-  height: 40px;
-  z-index: 5;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  grid-area: close;
-  margin-top: -40px;
-  margin-right: -50px;
-  margin-left: auto;
-}
-
-.elements__window-close:hover {
-  opacity: 60%;
-}
-
-.elements__image-full {
-  z-index: 5;
-  grid-area: image;
-  max-width: 75vw;
-}
-
-.elements__image-cover-hide {
-  display: none;
-}
-
-.elements__image-name {
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14.52px;
-  color: #ffffff;
-  margin-top: 10px;
-  grid-area: name;
-}
-
 .elements__delete {
   position: absolute;
   border: none;
