@@ -78,7 +78,7 @@ const initialCards = [
   },
 ];
 
-function cardClone(name, link) {
+function cloneCard(name, link) {
   const card = template
     .cloneNode(true)
     .content.querySelector(".elements__card");
@@ -101,6 +101,7 @@ function cardClone(name, link) {
     imageCover.classList.remove("overlay-hide");
     imageFull.src = cardImage.src;
     imageSubtitle.textContent = cardTitle.textContent;
+    imageFull.alt = cardArea.alt;
   }
 
   cardImage.src = link || imageLink.value;
@@ -110,7 +111,7 @@ function cardClone(name, link) {
 }
 
 initialCards.forEach(function (element) {
-  const newCard = cardClone(element.name, element.link);
+  const newCard = cloneCard(element.name, element.link);
   cardArea.append(newCard);
 });
 
@@ -119,9 +120,9 @@ const imageLink = document.querySelector("#input-url");
 
 imageNew.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  const cardSaved = cardClone();
+  const cardSaved = cloneCard();
   cardArea.prepend(cardSaved);
-  cardClone();
+  cloneCard();
   closeFormAdd();
 });
 
