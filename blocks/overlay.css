@@ -5,8 +5,6 @@
     "close"
     "image"
     "name";
-  grid-template-columns: 1;
-  grid-template-rows: 3;
   max-width: 75vw;
   max-height: 75vh;
   z-index: 5;
