@@ -101,12 +101,12 @@ function cloneCard(name, link) {
     imageCover.classList.remove("overlay-hide");
     imageFull.src = cardImage.src;
     imageSubtitle.textContent = cardTitle.textContent;
-    imageFull.alt = cardArea.alt;
+    imageFull.alt = cardImage.alt;
   }
 
   cardImage.src = link || imageLink.value;
   cardTitle.textContent = name || imageName.value;
-  cardArea.alt = name || imageName.value;
+  cardImage.alt = name || imageName.value;
   return card;
 }
 
