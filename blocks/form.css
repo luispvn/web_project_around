@@ -99,6 +99,15 @@
   color: #c4c4c4;
 }
 
+.form__error-msg {
+  position: inherit;
+  font-size: 10px;
+  font-weight: 400;
+  width: 358px;
+  margin: 0 auto;
+  color: red;
+}
+
 .form__content-work {
   font-size: 14px;
   font-weight: 400;
@@ -130,6 +139,14 @@
 
 .form__content-button:hover {
   opacity: 80%;
+}
+
+.form__input_error {
+  border-bottom: 1px solid red;
+}
+
+.form__content-button_disabled:disabled {
+  background-color: #c4c4c4;
 }
 
 @media (min-width: 320px) and (max-width: 562px) {
@@ -187,5 +204,10 @@
     width: 238px;
     height: 46px;
     font-size: 14px;
+  }
+
+  .form__error-msg {
+    width: 238px;
+    margin: 0 auto;
   }
 }

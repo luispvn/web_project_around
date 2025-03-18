@@ -22,15 +22,25 @@
               <input
                 type="text"
                 placeholder="Nombre"
-                class="form__content-name"
+                class="form__input form__content-name"
                 id="input-name"
+                minlength="2"
+                maxlength="40"
+                required
+                name="person-name"
               />
+              <span class="form__error-msg" id="person-name-error"></span>
               <input
                 type="text"
                 placeholder="Acerca de mi"
-                class="form__content-work"
+                class="form__input form__content-work"
                 id="input-work"
+                minlength="2"
+                maxlength="200"
+                required
+                name="work-name"
               />
+              <span class="form__error-msg" id="work-name-error"></span>
               <button
                 id="form__save"
                 type="submit"
@@ -44,22 +54,30 @@
         <div class="form__image form__image-hide">
           <div class="form__profile" id="form__profile-image">
             <div class="form__image-close">
-              <button type="submit" class="form__close-button"></button>
+              <button type="button" class="form__close-button"></button>
             </div>
             <form class="form__content" id="new-image">
               <h3 class="form__content-title">Nuevo Lugar</h3>
               <input
                 type="text"
                 placeholder="Título"
-                class="form__content-name"
+                class="form__content-name form__input"
                 id="input-title"
+                minlength="2"
+                maxlength="30"
+                required
+                name="title-name"
               />
+              <span class="form__error-msg" id="title-name-error"></span>
               <input
-                type="text"
+                type="url"
                 placeholder="Enlace a la imágen"
-                class="form__content-work"
+                class="form__content-work form__input"
                 id="input-url"
+                required
+                name="url-name"
               />
+              <span class="form__error-msg" id="url-name-error"></span>
               <button
                 id="form__create"
                 type="submit"
@@ -124,5 +142,6 @@
       </footer>
     </div>
     <script src="./script.js"></script>
+    <script src="./validate.js"></script>
   </body>
 </html>
