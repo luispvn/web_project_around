@@ -137,3 +137,31 @@ function closeImage() {
   console.log(Event);
 }
 imageClose.addEventListener("click", closeImage);
+
+// Código para mostrar el overlay
+const overlay = document.querySelector(".form__overlay");
+const formCard = document.querySelector(".form__card");
+const formImage = document.querySelector(".form__image");
+const closeButton = document.querySelector(".form__close-button");
+const openButton = document.querySelector(".profile__update");
+const openImageBtn = document.querySelector(".profile__add");
+
+// Función para mostrar el overlay y el formulario
+function showForm() {
+  overlay.classList.add("active");
+  formCard.classList.remove("form__card-hide");
+  formImage.classList.remove("form__image-hide");
+}
+
+// Función para ocultar el overlay y el formulario
+function hideForm() {
+  overlay.classList.remove("active");
+  formCard.classList.add("form__card-hide");
+  formImage.classList.add("form__image-hide");
+}
+
+// Eventos
+openButton.addEventListener("click", showForm);
+openImageBtn.addEventListener("click", showForm);
+closeButton.addEventListener("click", hideForm);
+overlay.addEventListener("click", hideForm);

@@ -3,26 +3,15 @@ function enableValidation(settings) {
   const inputList = Array.from(
     formElement.querySelectorAll(settings.inputSelector)
   );
-
-  inputList.forEach(function (input) {
-    input.addEventListener("input", function () {
-      checkInputValidity(input, settings);
-    });
-  });
-
   const buttonElement = formElement.querySelector(
     settings.submitButtonSelector
   );
-
-  const toggleButtonState = (inputList, buttonElement) => {
-    if (hasInvalidInput(inputList)) {
-      buttonElement.classList.add(".form__content-button_disabled");
-    } else {
-      buttonElement.classList.remove(".form__content-button_disabled");
-    }
-  };
-
-  toggleButtonState(inputList, buttonElement);
+  inputList.forEach(function (input) {
+    input.addEventListener("input", function () {
+      checkInputValidity(input, settings);
+      toggleButtonState(inputList, buttonElement);
+    });
+  });
 
   formElement.addEventListener("submit", function (evt) {
     evt.preventDefault();
@@ -36,6 +25,14 @@ function checkInputValidity(input, settings) {
     showInputError(input, settings);
   }
 }
+
+const toggleButtonState = (inputList, buttonElement) => {
+  if (hasInvalidInput(inputList)) {
+    buttonElement.classList.add("form__content-button_disabled");
+  } else {
+    buttonElement.classList.remove("form__content-button_disabled");
+  }
+};
 
 const hasInvalidInput = (inputList) => {
   return inputList.some((input) => {
@@ -56,10 +53,19 @@ function hideInputError(input, settings) {
 }
 
 enableValidation({
-  formSelector: ".form",
+  formSelector: ".form__content-one",
   inputSelector: ".form__input",
   submitButtonSelector: ".form__content-button",
-  inactiveButtonClass: ".form__content-button_disabled",
-  inputErrorClass: ".form__input_error",
-  errorClass: ".form__error_visible",
+  inactiveButtonClass: "form__content-button_disabled",
+  inputErrorClass: "form__input_error",
+  errorClass: "form__error_visible",
+});
+
+enableValidation({
+  formSelector: ".form__content-two",
+  inputSelector: ".form__input",
+  submitButtonSelector: ".form__content-button",
+  inactiveButtonClass: "form__content-button_disabled",
+  inputErrorClass: "form__input_error",
+  errorClass: "form__error_visible",
 });

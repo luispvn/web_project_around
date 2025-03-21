@@ -1,8 +1,23 @@
 .form__card {
   position: fixed;
-  z-index: 4;
+  z-index: 1010;
   left: calc(50vw - 215px);
   top: 195px;
+}
+
+.form__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+.form__overlay.active {
+  display: block;
 }
 
 .form__image {
@@ -145,8 +160,10 @@
   border-bottom: 1px solid red;
 }
 
-.form__content-button_disabled:disabled {
+.form__content-button_disabled {
   background-color: #c4c4c4;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 @media (min-width: 320px) and (max-width: 562px) {
